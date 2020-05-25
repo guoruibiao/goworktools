@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>工具箱</title>
+</head>
+<body>
+    <h3>Redis 页面查看器</h3>
+<div>
+    <select id="bdrp">
+        <option value="">下拉选择 BDRP</option>
+    </select>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <select id="instances">
+        <option value="">下拉选择合适的实例</option>
+    </select>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" id="key" placeholder="key 值">
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <select id="option" >
+        <option value="">下拉选择操作类型</option>
+        <option value="strlen">STRLEN</option>
+        <option value="get">GET</option>
+        <option value="llen">LLEN</option>
+        <option value="lrange">LRANGE</option>
+        <option value="scard">SCARD</option>
+        <option value="srandmember">SRANDMEMBER</option>
+        <option value="smembers">SMEMBERS</option>
+        <option value="hlen">HLEN</option>
+        <option value="hget">HGET</option>
+        <option value="hmget">HMGET</option>
+        <option value="hgetall">HGETALL</option>
+        <option value="zcard">ZCARD</option>
+        <option value="zscore">ZSCORE</option>
+        <option value="zrange">ZRANGE</option>
+        <option value="zrevrange">ZREVRANGE</option>
+    </select>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <button id="btn_do">查看</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <button id="reset">清空</button>
+    <br><br><br>
+    <div id="preview"></div>
+</div>
+
+<script src="/static/js/jquery-3.4.1.min.js"></script>
+<script src="/static/js/redis.js"></script>
+</body>
+</html>
